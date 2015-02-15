@@ -68,6 +68,14 @@ median(steps_per_day$steps)
 #Average Daily Activity Pattern
 time_series <- tapply(activity_data$steps, activity_data$interval, mean, na.rm = TRUE)
 
+
+#Plot requested time series
+plot(row.names(time_series), time_series, type = "l", xlab = "5 Minute Interval", 
+     ylab = "Average Across All Days", main = "Average Number of Steps", 
+     col = "blue")
+
+
+
 #Plot requested time series
 plot(row.names(time_series), time_series, type = "l", xlab = "5 Minute Interval", 
      ylab = "Average Across All Days", main = "Average Number of Steps", 
@@ -178,3 +186,4 @@ xyplot(steps ~ interval | daylevel, stepsByDay, type = "l", layout = c(1, 2),
 ```
 
 ![](./PA1_template_files/figure-html/unnamed-chunk-5-1.png) 
+

@@ -92,6 +92,14 @@ median(steps_per_day$steps)</code></pre>
 <pre class="r"><code>#Average Daily Activity Pattern
 time_series &lt;- tapply(activity_data$steps, activity_data$interval, mean, na.rm = TRUE)
 
+
+#Plot requested time series
+plot(row.names(time_series), time_series, type = &quot;l&quot;, xlab = &quot;5 Minute Interval&quot;, 
+     ylab = &quot;Average Across All Days&quot;, main = &quot;Average Number of Steps&quot;, 
+     col = &quot;blue&quot;)
+
+
+
 #Plot requested time series
 plot(row.names(time_series), time_series, type = &quot;l&quot;, xlab = &quot;5 Minute Interval&quot;, 
      ylab = &quot;Average Across All Days&quot;, main = &quot;Average Number of Steps&quot;, 
